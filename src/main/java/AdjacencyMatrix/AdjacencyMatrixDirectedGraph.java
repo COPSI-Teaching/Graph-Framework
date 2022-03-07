@@ -109,7 +109,7 @@ public class AdjacencyMatrixDirectedGraph extends AbstractMatrixGraph<DirectedNo
 
 	@Override
 	public IDirectedGraph computeInverse() {
-		AdjacencyMatrixDirectedGraph am = new AdjacencyMatrixDirectedGraph(this.matrix);
+		AdjacencyMatrixDirectedGraph am = new AdjacencyMatrixDirectedGraph(new int[this.order][this.order]);
 		// A completer
 		return am;
 	}
