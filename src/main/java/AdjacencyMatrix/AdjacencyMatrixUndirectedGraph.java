@@ -25,8 +25,8 @@ public class AdjacencyMatrixUndirectedGraph extends AbstractMatrixGraph<Undirect
 	}
 	
 	public AdjacencyMatrixUndirectedGraph(int[][] mat) {
-		this.order=mat.length;
-		this.matrix = new int[this.order][this.order];
+		order=mat.length;
+		matrix = new int[order][order];
 		for(int i = 0; i<this.order; i++){
 			for(int j = i; j<this.order; j++){
 				this.matrix[i][j] = mat[i][j];
@@ -67,7 +67,7 @@ public class AdjacencyMatrixUndirectedGraph extends AbstractMatrixGraph<Undirect
 	
 	@Override
 	public boolean isEdge(UndirectedNode x, UndirectedNode y) {
-		// TODO: Complete
+		// A completer
 		return true;		
 	}
 	
@@ -76,15 +76,17 @@ public class AdjacencyMatrixUndirectedGraph extends AbstractMatrixGraph<Undirect
      */
 	@Override
 	public void removeEdge(UndirectedNode x, UndirectedNode y) {
-		// TODO: Complete
+		if(isEdge(x,y)) {
+			// A completer
+		}
 	}
 
 	/**
-     * adds the edge (x,y), we allow the multi-graph.
+     * adds the edge (x,y), we allow the multi-graph. If we have three edges between two nodes, we have the value 3.
      */
 	@Override
 	public void addEdge(UndirectedNode x, UndirectedNode y) {
-		// TODO: Complete
+		// A completer
 	}
 
 	
@@ -113,17 +115,25 @@ public class AdjacencyMatrixUndirectedGraph extends AbstractMatrixGraph<Undirect
 		GraphTools.afficherMatrix(mat2);
 		AdjacencyMatrixUndirectedGraph am = new AdjacencyMatrixUndirectedGraph(mat2);
 		System.out.println(am);
+		
+		System.out.println("\n isEdge : " + am.isEdge(new UndirectedNode(2), new UndirectedNode(5)));
+		
+		/*
 		System.out.println("N = "+am.getNbNodes()+ "\n M = "+am.getNbEdges());
 		List<Integer> t2 = am.getNeighbours(new UndirectedNode(2));
 		for (Integer integer : t2) {
 			System.out.print(integer + ", ");
 		}
-		am.isEdge(new UndirectedNode(2), new UndirectedNode(5));
+		
+		
+		
 		for(int i = 0; i<3;i++)
 			am.addEdge(new UndirectedNode(2), new UndirectedNode(5));
 		System.out.println(am);
 		am.removeEdge(new UndirectedNode(2), new UndirectedNode(5));
 		System.out.println(am);
-		// TODO: Complete
+		// A completer
+		  */
+		 
 	}
 }

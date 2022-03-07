@@ -76,8 +76,9 @@ public class AdjacencyMatrixDirectedGraph extends AbstractMatrixGraph<DirectedNo
 	
 	@Override
 	public boolean isArc(DirectedNode from, DirectedNode to) {
-		// TODO: Complete
-		return true;
+		// A completer
+		return true; 
+		
 	}
 
 	/**
@@ -85,7 +86,9 @@ public class AdjacencyMatrixDirectedGraph extends AbstractMatrixGraph<DirectedNo
 	 */
 	@Override
 	public void removeArc(DirectedNode from, DirectedNode to) {
-		// TODO: Complete
+		if(isArc(from,to)) {
+			// A completer
+		}		
 	}
 
 	/**
@@ -93,7 +96,7 @@ public class AdjacencyMatrixDirectedGraph extends AbstractMatrixGraph<DirectedNo
 	 */
 	@Override
 	public void addArc(DirectedNode from, DirectedNode to) {
-		// TODO: Complete
+		// A completer
 	}
 
 
@@ -107,14 +110,7 @@ public class AdjacencyMatrixDirectedGraph extends AbstractMatrixGraph<DirectedNo
 	@Override
 	public IDirectedGraph computeInverse() {
 		AdjacencyMatrixDirectedGraph am = new AdjacencyMatrixDirectedGraph(this.matrix);
-		for(int i=0; i<this.order; i++) {
-			for(int j=i+1; j<this.order; j++) {
-				int tmp = am.matrix[i][j];
-				am.matrix[i][j] = am.matrix[j][i];
-				am.matrix[j][i] = tmp;
-			}
-		}
-		// TODO: Complete
+		// A completer
 		return am;
 	}
 
@@ -144,6 +140,6 @@ public class AdjacencyMatrixDirectedGraph extends AbstractMatrixGraph<DirectedNo
 		for (Integer integer : t2) {
 			System.out.print(integer + ", ");
 		}
-		// TODO: Complete
+		// A completer
 	}
 }
